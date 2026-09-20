@@ -1,0 +1,4 @@
+[
+  { "name": "Elden Ring", "kind": "EasyAntiCheatEos", "status": "Supported", "opt_in_required": true, "needs_kernel_driver": false, "note": "FromSoftware enabled the Linux module." },
+  { "name": "Valorant", "kind": "Vanguard", "status": "Denied", "opt_in_required": false, "needs_kernel_driver": true, "note": "Needs a Windows boot driver." }
+]

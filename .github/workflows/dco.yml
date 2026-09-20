@@ -1,0 +1,19 @@
+name: dco
+on: [push, pull_request]
+jobs:
+  signoff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check sign-off
+        run: |
+          bad=0
+          for c in $(git log --format=%H origin/main..HEAD 2>/dev/null || git log --format=%H -5); do
+            if ! git log --format=%B -n 1 "$c" | grep -q "^Signed-off-by: "; then
+              echo "missing Signed-off-by in $c"
+              bad=1
+            fi
+          done
+          exit $bad

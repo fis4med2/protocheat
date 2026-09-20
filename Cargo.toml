@@ -1,0 +1,28 @@
+[workspace]
+members = [
+  "crates/protocheat-core",
+  "crates/protocheat-launchers",
+  "crates/protocheat-ntsync",
+  "crates/protocheat-syscall",
+  "crates/protocheat-shim",
+  "crates/protocheat-cli",
+  "crates/protocheat-proton",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+protocheat-core = { path = "crates/protocheat-core" }
+protocheat-launchers = { path = "crates/protocheat-launchers" }
+protocheat-ntsync = { path = "crates/protocheat-ntsync" }
+protocheat-syscall = { path = "crates/protocheat-syscall" }
+protocheat-proton = { path = "crates/protocheat-proton" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+clap = { version = "4", features = ["derive"] }
+thiserror = "2"
+tracing = "0.1"

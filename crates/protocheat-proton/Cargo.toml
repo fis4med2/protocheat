@@ -1,0 +1,9 @@
+[package]
+name = "protocheat-proton"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+serde.workspace = true
+protocheat-core.workspace = true
